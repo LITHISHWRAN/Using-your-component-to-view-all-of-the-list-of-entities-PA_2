@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import viteLogo from '/vite.svg';
+import Postcard from './components/postcard'
+import "./App.css"
 
 function App() {
 
@@ -31,6 +32,11 @@ function App() {
 
   return (
     <>
+    {initialPosts.map((post, index) => {
+      return (
+        <Postcard key={index} post={post} />
+      )
+    })}
       
     </>
   )
